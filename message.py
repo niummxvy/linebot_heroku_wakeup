@@ -79,9 +79,8 @@ def buttons_message():
 
 #TemplateSendMessage - ConfirmTemplate(確認介面訊息)
 def Confirm_Template1():
-
+    #print("身份確認")
     message = TemplateSendMessage(
-        print("身份確認")
         alt_text='Confirm Template 請至智慧手機上確認訊息內容',
         template=ConfirmTemplate(
             title="身份確認",
@@ -103,7 +102,7 @@ def Confirm_Template1():
     return message
 
 def Confirm_Template2():
-    print("我是配送員")
+    #print("我是配送員")
     message = TemplateSendMessage(
         alt_text='Confirm Template 請至智慧手機上確認訊息內容',
         template=ConfirmTemplate(

@@ -80,9 +80,11 @@ def handle_message(event):
         message = buttons_message()
         line_bot_api.reply_message(event.reply_token, message)
     elif '身份確認' in msg:
+        print("身份確認")
         message = Confirm_Template1()
         line_bot_api.reply_message(event.reply_token, message)
     elif '我是配送員' in msg:
+        print("我是配送員")
         message = Confirm_Template2()
         line_bot_api.reply_message(event.reply_token, message)
     elif '旋轉木馬' in msg:
