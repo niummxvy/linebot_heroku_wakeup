@@ -81,7 +81,7 @@ def buttons_message():
 def Confirm_Template():
 
     message = TemplateSendMessage(
-        alt_text='是否註冊成為會員？',
+        alt_text='你的身份是？',
         template=ConfirmTemplate(
             text="是否註冊成為會員？",
             actions=[
