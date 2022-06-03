@@ -81,10 +81,11 @@ def buttons_message():
 def Confirm_Template1():
 
     message = TemplateSendMessage(
+        print("身份確認")
         alt_text='Confirm Template 請至智慧手機上確認訊息內容',
         template=ConfirmTemplate(
-            text="身份確認",
-            title="您好，歡迎使用MEDELIVERY!\n\n你是一位",
+            title="身份確認",
+            text="您好，歡迎使用MEDELIVERY!\n\n你是一位",
             actions=[
                 PostbackTemplateAction(
                     label="我是配送員",
@@ -102,7 +103,7 @@ def Confirm_Template1():
     return message
 
 def Confirm_Template2():
-
+    print("我是配送員")
     message = TemplateSendMessage(
         alt_text='Confirm Template 請至智慧手機上確認訊息內容',
         template=ConfirmTemplate(
