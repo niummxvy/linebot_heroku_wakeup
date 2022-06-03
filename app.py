@@ -133,6 +133,7 @@ def handle_message(event):
     #======MongoDB操作範例======
 
     else:
+        print("其他語句")
         message = TextSendMessage(text=msg)
         line_bot_api.reply_message(event.reply_token, message)
 
