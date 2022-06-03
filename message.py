@@ -5,7 +5,7 @@ from linebot.models import *
 def imagemap_message():
     message = ImagemapSendMessage(
         base_url="https://i.imgur.com/BfTFVDN.jpg",
-        alt_text='最新的合作廠商有誰呢？',
+        alt_text='Imagemap Message 請至智慧手機上確認訊息內容',
         base_size=BaseSize(height=2000, width=2000),
         actions=[
             URIImagemapAction(
@@ -50,7 +50,7 @@ def imagemap_message():
 #TemplateSendMessage - ButtonsTemplate (按鈕介面訊息)
 def buttons_message():
     message = TemplateSendMessage(
-        alt_text='好消息來囉～',
+        alt_text='Buttons Message 請至智慧手機上確認訊息內容',
         template=ButtonsTemplate(
             thumbnail_image_url="https://pic2.zhimg.com/v2-de4b8114e8408d5265503c8b41f59f85_b.jpg",
             title="是否要進行抽獎活動？",
@@ -78,32 +78,61 @@ def buttons_message():
     return message
 
 #TemplateSendMessage - ConfirmTemplate(確認介面訊息)
-def Confirm_Template():
+def Confirm_Template1():
 
     message = TemplateSendMessage(
-        alt_text='你的身份是？',
+        alt_text='Confirm Template 請至智慧手機上確認訊息內容',
         template=ConfirmTemplate(
-            text="是否註冊成為會員？",
+            text="您好，歡迎使用MEDELIVERY!\n\n你是一位",
             actions=[
                 PostbackTemplateAction(
-                    label="馬上註冊",
-                    text="現在、立刻、馬上",
-                    data="會員註冊"
+                    label="我是配送員",
+                    text="我是配送員",
+                    data="我是配送員"
                 ),
                 MessageTemplateAction(
-                    label="查詢其他功能",
-                    text="查詢其他功能"
+                    label="我是一般民眾",
+                    text="我是一般民眾",
+                    data="我是一般民眾"
                 )
             ]
         )
     )
     return message
 
+def Confirm_Template2():
+
+    message = TemplateSendMessage(
+        alt_text='Confirm Template 請至智慧手機上確認訊息內容',
+        template=ConfirmTemplate(
+            text="訂單：快篩*1\n配送員取件地址：台北市AA區BB路11號之1\n收件地址：台北市CC區DD路22號之2\n配送員取件時間：2022/05/15 15:30\n收件時間：2022/05/15 15:40\n距離：5km",
+            actions=[
+                MessageTemplateAction(
+                    label="接這一單",
+                    text="接這一單",
+                ),
+                MessageTemplateAction(
+                    label="下一位",
+                    text="下一位",
+                )
+            ]
+        )
+    )
+    return message
+
+
+'''PostbackTemplateAction(
+    label="接這一單",
+    text="接這一單",
+    data="接這一單"
+),'''
+
+
 #旋轉木馬按鈕訊息介面
 
 def Carousel_Template():
     message = TemplateSendMessage(
-        alt_text='一則旋轉木馬按鈕訊息',
+        alt_text='Carousel Template 請至智慧手機上確認訊息內容',
         template=CarouselTemplate(
             columns=[
                 CarouselColumn(
@@ -171,7 +200,7 @@ def Carousel_Template():
 #TemplateSendMessage - ImageCarouselTemplate(圖片旋轉木馬)
 def image_carousel_message1():
     message = TemplateSendMessage(
-        alt_text='圖片旋轉木馬',
+        alt_text='Image Carousel Message 請至智慧手機上確認訊息內容',
         template=ImageCarouselTemplate(
             columns=[
                 ImageCarouselColumn(
