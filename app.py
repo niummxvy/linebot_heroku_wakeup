@@ -40,9 +40,9 @@ threading.Thread(target=wake_up_heroku).start()
 app = Flask(__name__,template_folder='templates')
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 # Channel Access Token
-line_bot_api = LineBotApi('你的Channel AcessToken')
+line_bot_api = LineBotApi('1bwyJcBmsJ21JI+kFzF9Lx8BJbOWFHSs7PbLS0+gu2Gh+aU33XQFN4NckqxUPBuDbXXFboKfCG62ZWplVqJZ8VsMGqpJTtz1lJ+46ooEErSJqi/lKZUVD5sBvqeAACvhXIBKZrWGSbOYleTSDNduEwdB04t89/1O/w1cDnyilFU=')
 # Channel Secret
-handler = WebhookHandler('你的Channel Secret')
+handler = WebhookHandler('28d7f12a76dce715984d0cc552aaf57d')
 
 @app.route("/")
 def index():
